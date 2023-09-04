@@ -1,2 +1,4 @@
 # PatientRePro-hospital-readmission-prediction
-PatientRePro interprets patient data using predictive analysis, allowing healthcare providers to anticipate and mitigate readmission risks. This not only reduces unplanned readmissions, saving hospitals money, but also improves patient outcomes through better post-discharge care. 
+PatientRePro adalah aplikasi yang memanfaatkan teknologi Machine Learning untuk menginterpretasikan data pasien, memungkinkan penyedia layanan kesehatan untuk mengantisipasi dan mengurangi risiko readmission. Selain itu, kemampuan PatientRePro untuk mengumpulkan data pasien secara terpusat dari berbagai sistem menyediakan pandangan menyeluruh tentang kesehatan seorang pasien. 
+
+Akses Link: https://patientrepro-queryous-squad.streamlit.app/ 
