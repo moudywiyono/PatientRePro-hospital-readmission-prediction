@@ -14,5 +14,5 @@ streamlit_option_menu
 joblib
 streamlit_lottie
 plotly.express
-keras
 requests
+tensorflow
