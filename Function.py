@@ -71,7 +71,8 @@ def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
     return final_list
 
 def prediction(input_data):
-    rf_model = pickle.load("finalModel.pkl")
+    with open("finalModel.pkl", "rb") as file:
+        rf_model = pickle.load(file)
     
     input_numpy_array=np.array(input_data)
 
