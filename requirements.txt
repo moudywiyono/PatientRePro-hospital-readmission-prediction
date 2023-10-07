@@ -1,0 +1,14 @@
+streamlit
+gsheetsdb
+google-auth
+gspread
+pyparsing
+streamlit_option_menu
+hydralit_components
+datetime
+pandas
+numpy
+scikit-learn==1.2.2
+base64
+streamlit_extras
+streamlit_option_menu
