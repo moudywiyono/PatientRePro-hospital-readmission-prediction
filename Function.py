@@ -432,7 +432,7 @@ def patient_profile(selected_subject):
             dob_str = str(dob).strip("'")
 
             # Format the date of birth
-            dob_datetime = datetime.datetime.strptime(dob_str, "%Y-%m-%d")
+            dob_datetime = datetime.strptime(dob_str, "%Y-%m-%d")
             formatted_dob = dob_datetime.strftime("%B %d, %Y")
 
             st.write("Date of Birth:", formatted_dob)
