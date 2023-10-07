@@ -211,8 +211,11 @@ def add_patient():
         st.session_state.resp_counter = 0
 
     # Collect admission details
-    admission_time = st.date_input("Admission Date:")
-    discharge_time = st.date_input("Discharge Date:")
+    min_date = datetime(1900, 1, 1)
+    max_date = datetime.now()
+    
+    admission_time = st.date_input("Admission Date:", min_value=min_date, max_value=max_date)
+    discharge_time = st.date_input("Discharge Date:", min_value=min_date, max_value=max_date)
     admission_type = st.radio("Admission Type", ["Emergency", "Elective"])
     admission_location = st.selectbox("Admission Location:", ["CLINIC REFERRAL/PREMATURE", "EMERGENCY ROOM ADMIT", "PHYS REFERRAL/NORMAL DELI", "TRANSFER FROM HOSP/ESTRAM", "TRANSFER FROM SKILLED NUR"])
     discharge_location = st.selectbox("Discharge Location:", ["DEAD/EXPIRED", "DISCH-TRAN TO PSYCH HOSP", "HOME", "HOME HEALTH CARE", "HOME WITH HOME IV PROVIDR", "HOSPICE-HOME", "ICF", "LONG TERM CARE HOSPITAL", "REHAB/DISTINCT PART HOSP", "SNF"])
