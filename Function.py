@@ -7,14 +7,10 @@ import pandas as pd
 import numpy as np
 import hydralit_components as hc
 import gspread
-import pickle
 import base64
 import hydralit_components as hc
 import plotly.express as px
-
-
-
-rf_model=pickle.load(open("best_model.pkl","rb"))
+import joblib
 
 def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
     diagnosis_variables = ["V5861", "486", "49121", "27651", "41400", "28529", "V4581", "4019","51881","72400","49390"]
@@ -71,6 +67,8 @@ def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
     return final_list
 
 def prediction(input_data):
+    rf_model = joblib.load("best_model.pkl")
+    
     input_numpy_array=np.array(input_data)
 
     input_reshaped=input_numpy_array.reshape(1,-1)
