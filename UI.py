@@ -10,7 +10,6 @@ import pandas as pd
 import numpy as np
 import hydralit_components as hc
 import gspread
-import pickle
 import base64
 from Function import *
 from streamlit_extras.switch_page_button import switch_page
@@ -18,9 +17,6 @@ from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(page_title="PatientRePro", layout="wide", initial_sidebar_state="collapsed")
 st.markdown(""" <style> [data-testid="collapsedControl"] ... </style> """, unsafe_allow_html=True)
-
-
-rf_model=pickle.load(open("best_model.pkl","rb"))
 
 def load_lottieurl(url):
     r = requests.get(url)
