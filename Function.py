@@ -868,6 +868,8 @@ def viz():
         filtered_df = df_profile[df_profile['Flag'] == selected_flag]
 
     filtered_df['ID'] = filtered_df['ID'].str.replace(',', '').astype(int)
+
+    # Display the filtered DataFrame
     st.write(filtered_df)
 
 
