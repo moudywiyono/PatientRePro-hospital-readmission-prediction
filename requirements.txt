@@ -13,3 +13,4 @@ streamlit_extras
 streamlit_option_menu
 joblib
 streamlit_lottie
+plotly-express
