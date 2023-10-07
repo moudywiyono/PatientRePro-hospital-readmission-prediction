@@ -871,7 +871,7 @@ def viz():
     
     # Display the filtered DataFrame
     st.write(filtered_df)
-
+    filtered_df['ID'] = filtered_df['ID'].astype(int)
 
     filtered_subjectid=filtered_df["ID"].tolist()
 
