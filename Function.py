@@ -549,7 +549,7 @@ def patient_history(selected_subject):
             st.write("Patient", full_name, "had been diagnosed with:\n")
 
             # Create a styled frame around the diagnoses text with a background color
-            highlighted_diagnoses = f'<div style="border: 2px solid #000; padding: 10px; border-radius: 5px; background-color: lightblue;">{diagnoses}</div>'
+            highlighted_diagnoses = f'<div style="border: 2px solid #000; padding: 10px; border-radius: 5px; background-color: purple;">{diagnoses}</div>'
             
             st.markdown(highlighted_diagnoses, unsafe_allow_html=True)
 
