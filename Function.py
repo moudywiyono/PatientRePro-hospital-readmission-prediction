@@ -14,7 +14,7 @@ import joblib
 from tensorflow import keras
 
 def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
-    diagnosis_variables = ["V5861", "486", "49121", "27651", "41400", "28529", "V4581", "4019","51881","72400","49390"]
+    diagnosis_variables = ["4280", "49121", "99662", "30390", "51881", "41400", "V4581", "49390"]
     
     availability_list = [0] * len(diagnosis_variables)
 
@@ -43,9 +43,10 @@ def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
         "blood_blood gas_normal":0,
         "blood_hematology_normal": 0,
         "blood_hematology_abnormal": 0,
-        "urine_chemistry_0": 0
+        "urine_chemistry_0": 0,
+        "urine_chemistry_normal": 0,
     }
-
+    
     # Iterate through the fluid_category_flag_list
     for item in fluid_category_flag_list:
         fluid, category, flag = item
@@ -69,7 +70,7 @@ def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
     return final_list
 
 def prediction(input_data):
-    rf_model = joblib.load("best_model.pkl")
+    rf_model = pickle.load("finalModel.pkl")
     
     input_numpy_array=np.array(input_data)
 
