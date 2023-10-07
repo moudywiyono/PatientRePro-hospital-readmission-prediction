@@ -16,4 +16,3 @@ streamlit_lottie
 plotly.express
 requests
 tensorflow
-pickle
