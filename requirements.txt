@@ -11,3 +11,5 @@ numpy
 scikit-learn==1.2.2
 streamlit_extras
 streamlit_option_menu
+joblib
+streamlit-lottie
