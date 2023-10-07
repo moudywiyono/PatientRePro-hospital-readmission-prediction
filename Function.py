@@ -867,6 +867,7 @@ def viz():
     if selected_flag != -1:
         filtered_df = df_profile[df_profile['Flag'] == selected_flag]
 
+    filtered_df['ID'] = filtered_df['ID'].astype(int).astype(str)
     
     # Display the filtered DataFrame
     st.write(filtered_df)
