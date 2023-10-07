@@ -11,6 +11,7 @@ import base64
 import hydralit_components as hc
 import plotly.express as px
 import joblib
+import keras
 
 def pre_processing(diagnosiscode_list,icu_counter,resp_counter,los,lab_list):
     diagnosis_variables = ["V5861", "486", "49121", "27651", "41400", "28529", "V4581", "4019","51881","72400","49390"]
