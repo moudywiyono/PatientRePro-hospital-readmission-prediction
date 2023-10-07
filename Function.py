@@ -453,7 +453,7 @@ def patient_profile(selected_subject):
                 dod_str = str(dod).strip("'")
 
                 # Format the date of death
-                dod_datetime = datetime.datetime.strptime(dod_str, "%Y-%m-%d")
+                dod_datetime = datetime.strptime(dod_str, "%Y-%m-%d")
                 formatted_dod = dod_datetime.strftime("%B %d, %Y")
 
                 st.write("Date of Death:", formatted_dod)
@@ -914,7 +914,7 @@ def viz():
         filtered_df['Birthdate'] = filtered_df['Birthdate'].str.replace("'", '')
         filtered_df['Birthdate'] = pd.to_datetime(filtered_df['Birthdate'])
         filtered_df['Birthdate'] = filtered_df['Birthdate'].dt.date
-        current_date=datetime.datetime.now().date()
+        current_date=datetime.now().date()
         filtered_df['Age'] = ((current_date - filtered_df['Birthdate']) / pd.Timedelta(days=365.25)).astype(int)
         # Define age groups (adjust as needed)
         age_bins = [0, 20, 30, 40, 50, 60, float('inf')]
