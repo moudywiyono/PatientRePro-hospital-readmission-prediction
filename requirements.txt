@@ -9,6 +9,5 @@ datetime
 pandas
 numpy
 scikit-learn==1.2.2
-base64
 streamlit_extras
 streamlit_option_menu
